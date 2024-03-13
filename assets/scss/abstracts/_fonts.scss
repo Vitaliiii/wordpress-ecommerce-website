@@ -14,9 +14,12 @@
   }
 }
 
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-Book", 400);
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-Italic", 400, italic);
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-Thin", 300);
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-Medium", 500);
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-SemiBolditalic", 600, italic);
-@include font-face("PP Neue Montreal", "../fonts/PPNeueMontreal/PPNeueMontreal-Bold", 700);
+@include font-face("Inter", "../fonts/Inter/Inter-Thin", 100);
+@include font-face("Inter", "../fonts/Inter/Inter-ExtraLight", 200);
+@include font-face("Inter", "../fonts/Inter/Inter-Light", 300);
+@include font-face("Inter", "../fonts/Inter/Inter-Regular", 400);
+@include font-face("Inter", "../fonts/Inter/Inter-Medium", 500);
+@include font-face("Inter", "../fonts/Inter/Inter-SemiBold", 600);
+@include font-face("Inter", "../fonts/Inter/Inter-Bold", 700);
+@include font-face("Inter", "../fonts/Inter/Inter-ExtraBold", 800);
+@include font-face("Inter", "../fonts/Inter/Inter-Black", 900);

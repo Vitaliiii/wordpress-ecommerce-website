@@ -1,21 +1,20 @@
 // Fonts
-$PPNeueMontreal : "PP Neue Montreal";
+$primaryFont : "Inter";
 
 
 // Font Sizing
-$baseFontSize      : 16px;
-$baseLineHeight    : normal;
-$headingLineHeight : normal;
+$baseFontSize      : 15px;
+$baseLineHeight    : 1.6;
+$headingLineHeight : 1.2;
 
 // Colors
 
 $black : #000000;
-$dark : #081516;
-$green : #085151;
-$greenGray : #9EB1B5;
-$gray : #ECEDEE;
 $white : #ffffff;
-$linearGradient: linear-gradient(257deg, #085151 3.83%, #081516 99.18%);
+$lightGray : #f5f5f5;
+$gray : #ECEDEE;
+$blue : #48C0F8;
+$green : #21C004;
 
 // Spacing
 $pad : 1em;

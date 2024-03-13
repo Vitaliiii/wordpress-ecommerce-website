@@ -194,18 +194,15 @@ if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
-		'page_title' => 'Header/Footer Content',
-		'menu_slug' => 'footer-content',
+		'page_title' => 'Global Content',
+		'menu_slug' => 'global-content',
 		'position' => '21',
-		'icon_url' => 'dashicons-table-row-after',
+		'icon_url' => 'dashicons-welcome-widgets-menus',
 	));
   }
 
-
-  
 // Removes from admin menu
 add_action( 'admin_menu', 'my_remove_admin_menus' );
 function my_remove_admin_menus() {
@@ -225,10 +222,6 @@ function mytheme_admin_bar_render() {
 }
 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
 
-
-
-
-
 function load_custom_wp_admin_style(){
     wp_register_style( 'custom_wp_admin_css', get_bloginfo('stylesheet_directory') . '/admin-style.css', false, '1.0.0' );
     wp_enqueue_style( 'custom_wp_admin_css' );
@@ -238,8 +231,8 @@ add_action('admin_enqueue_scripts', 'load_custom_wp_admin_style');
 //exclide node_modules and git folders from ain1wm
  
 add_filter( 'ai1wm_exclude_themes_from_export', function ( $exclude_filters ) {
-	$exclude_filters[] = 'default-theme/node_modules';
-	$exclude_filters[] = 'default-theme/.git'; 
+	$exclude_filters[] = 'online-market/node_modules';
+	$exclude_filters[] = 'online-market/.git'; 
 	return $exclude_filters;
 } );
 

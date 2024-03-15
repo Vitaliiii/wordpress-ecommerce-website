@@ -32,21 +32,34 @@
 		<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e('Skip to content', 'hcl-actian'); ?></a>
 		
 		<header id="masthead" class="site-header">
-			<?php the_custom_logo();?>
-
-
-			<?php
-			$theme_location = 'main-menu';
-			if ( has_nav_menu( $theme_location ) ) { 
-				wp_nav_menu(
-					array(
-						'theme_location' => $theme_location,
-						'menu_id'        => 'primary-menu',
-						'container'        => 'nav',
-						'container_class'  => 'menu',
-						'menu_class'       => 'menu-list', 
-					)
-				);
-			} ?>
+			<div class="container">
+				<div class="header-wrapper">
+					<?php the_custom_logo();?>
+					<?php
+					$theme_location = 'header-menu';
+					if ( has_nav_menu( $theme_location ) ) { 
+						wp_nav_menu(
+							array(
+								'theme_location' => $theme_location,
+								'menu_id'        => 'primary-menu',
+								'container'        => 'nav',
+								'container_class'  => 'header-menu',
+								'menu_class'       => 'header-menu-list', 
+							)
+						);
+					} ?>
+					<div class="button-box">
+						<nav class="lang-nav">
+							<div class="current-lang"><?php echo pll_current_language(); ?></div>
+							<ul>
+								<?php pll_the_languages( array( 'show_flags' => 0,'show_names' => 1, 'display_names_as' => 'slug', 'hide_current'=> 1 ) ); ?>
+							</ul>
+						</nav>
+						<button class="menu-toggle" type="button" aria-label="toggle menu">
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+				</div>
+			</div>
 		</header>
 		

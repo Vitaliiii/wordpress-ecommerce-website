@@ -13,7 +13,7 @@ jQuery(document).on('ready', function () {
   
     function toggleMobileMenu() {
       jQuery('.menu-toggle').on('click', function () {
-        jQuery('.menu-wrapper').toggleClass('show');
+        jQuery('.header-menu').toggleClass('show');
         jQuery('.menu-toggle').toggleClass('show');
         jQuery('body').toggleClass('lock');
         if (jQuery('body').hasClass('lock') === true) {
@@ -23,12 +23,19 @@ jQuery(document).on('ready', function () {
         }
       });
   
-      jQuery('.menu-wrapper .menu li a').on('click', function () {
-        if (jQuery(window).width() < 1080) {
-          jQuery('.menu-wrapper').removeClass('show');
+      jQuery('.header-menu li a').on('click', function () {
+        if (jQuery(window).width() < 1024) {
+          jQuery('.header-menu').removeClass('show');
           jQuery('.menu-toggle').removeClass('show');
           jQuery('body').removeClass('lock');
           closeMenu();
+        }
+      });
+
+      jQuery('.header-menu li.menu-item-has-children').on('click', function () {
+        if (jQuery(window).width() < 1024) {
+          jQuery(this).toggleClass('open');
+          jQuery(this).find('.sub-menu').slideToggle();
         }
       });
     }

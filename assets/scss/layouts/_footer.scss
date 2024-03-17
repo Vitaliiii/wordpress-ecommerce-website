@@ -1,0 +1,124 @@
+.site-footer{
+    width: 100%;
+    background-color: $black;
+
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    &__content{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 100px 0 60px;
+        gap: 50px;
+
+        @media (max-width: $smallBreakpoint) {
+            padding: 70px 0 40px;
+            gap: 30px;
+        }
+    }
+    &__main-box{
+        width: calc(40% - 25px);
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        @media (max-width: $smallBreakpoint){
+            gap: 15px;
+            width: 100%;
+        }
+
+        .custom-logo-link{
+
+            .custom-footer-logo {
+                display: flex;
+                max-width: 200px;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+    .menu{
+        width: calc(60% - 25px);
+
+        @media (max-width: $smallBreakpoint){
+            width: 100%;
+        }
+
+        &-list{
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            @media (max-width: $smallBreakpoint){
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            li.menu-item-has-children{
+                > a{
+                    display: none;
+                }
+
+                ul.sub-menu{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    @media (max-width: $smallBreakpoint){
+                        gap: 10px;
+                    }
+
+                    li{
+
+                        a{
+                            color: $white;
+                            text-decoration: none;
+                            position: relative;
+                            font-size: 18px;
+
+                            &::before{
+                                content: '';
+                                display: block;
+                                width: 0%;
+                                height: 1px;
+                                background-color: $white;
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                transition: 0.2s ease-in-out;
+                            }
+            
+                            &:hover {
+                                
+                                &::before{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &__copyright{
+        width: 100%;
+        padding: 30px 0;
+        border-top: 1px solid $white;
+
+        @media (max-width: $smallBreakpoint){
+            padding: 15px 0;
+        }
+
+        p{
+            width: 100%;
+            text-align: center;
+            color: $white;
+        }
+    }
+}

@@ -29,10 +29,21 @@ body.lock {
   overflow: hidden;
 
   &-main{
-    height: 100vh;
+    padding-top: 80px;
+
+    @media (min-width: $smallBreakpoint) {
+      padding-top: 100px;
+    }
   }
-  
+
   >main {
     flex: 1 1 auto;
+  }
+}
+
+h1,h2,h3,h4,h5,h6,p{
+  
+  .accent{
+    color: $blue;
   }
 }

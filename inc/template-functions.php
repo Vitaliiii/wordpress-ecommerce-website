@@ -35,3 +35,8 @@ function market_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'market_pingback_header' );
+
+function add_accent_tag($string) {
+    $new_string = preg_replace( '/{{(.*)}}/i', '<span class="accent">$1</span>', $string );
+    return $new_string;
+}

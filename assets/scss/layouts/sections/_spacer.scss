@@ -1,0 +1,8 @@
+.spacer {
+    background-color: var(--space-bg-color);
+    height: var(--space-desktop);
+    margin: -1px 0;
+    @media(max-width: $smallBreakpoint) {
+        height: var(--space-mobile);
+    }
+}

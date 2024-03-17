@@ -1,5 +1,1 @@
-<?php 
-    $heightdesk = get_sub_field('space_desktop');
-    $heightmob = get_sub_field('space_mobile');
-?>
-<div class="spacer" style="--space-desktop: <?php echo $heightdesk; ?>px;  --space-mobile: <?php echo $heightmob; ?>px"></div>
+<div class="spacer" style="--space-desktop: <?php the_sub_field('space_desktop'); ?>px;  --space-mobile: <?php the_sub_field('space_mobile'); ?>px; --space-bg-color: <?php the_sub_field('background_color'); ?>;"></div>

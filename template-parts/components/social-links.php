@@ -1,6 +1,6 @@
-<?php if( have_rows('social_links', 'option') ): ?>
+<?php if( have_rows('social_media', 'option') ): ?>
     <ul class="social-links">
-    <?php while( have_rows('social_links', 'option') ): the_row(); 
+    <?php while( have_rows('social_media', 'option') ): the_row(); 
         $icon = get_sub_field('icon');
         $link = get_sub_field('link');
         ?>

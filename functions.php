@@ -49,8 +49,9 @@ function market_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'main-menu' => esc_html__( 'Main Menu', 'market' ),
+			'header-menu' => esc_html__( 'Header Menu', 'market'),
 			'footer-menu' => esc_html__( 'Footer Menu', 'market' ),
+			'language-menu' => esc_html__( 'Language Menu', 'market' ),
 		)
 	);
 
